@@ -1,0 +1,43 @@
+{
+  "name": "",
+  "version": "0.0.0",
+  "main": "lib/index.js",
+  "type": "module",
+  "repository": "https://github.com/iamkacperwasik/.git",
+  "author": "Kacper Wąsik <kacper@wasik.me>",
+  "license": "MIT",
+  "private": false,
+  "files": [
+    "lib/"
+  ],
+  "keywords": [],
+  "description": "",
+  "types": "lib/index.d.ts",
+  "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^4.1.1",
+    "@types/node": "^18.15.3",
+    "esbuild": "^0.17.12",
+    "prettier": "^2.8.5",
+    "typescript": "^5.0.2",
+    "vitest": "^0.29.7"
+  },
+  "prettier": {
+    "importOrder": [
+      "^util/(.*)$",
+      "^[./]"
+    ],
+    "importOrderSeparation": true,
+    "importOrderSortSpecifiers": true,
+    "bracketSpacing": false,
+    "semi": false,
+    "plugins": [
+      "@trivago/prettier-plugin-sort-imports"
+    ],
+    "pluginSearchDirs": false
+  },
+  "scripts": {
+    "build": "node build.mjs",
+    "test": "vitest",
+    "prepack": "npm run build"
+  }
+}
