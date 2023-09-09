@@ -8,6 +8,6 @@ export {calculate_kemmler_1rm} from "./methods/Kemmler"
 export {calculate_lander_1rm} from "./methods/Lander"
 export {calculate_lombardi_1rm} from "./methods/Lombardi"
 export {calculate_mayhew_szekely_1rm} from "./methods/MayhewSzekely"
-// Naclerio
+export {calculate_naclerio_1rm} from "./methods/Naclerio"
 // OConner
 export {calculate_wathan_1rm} from "./methods/Wathan"
