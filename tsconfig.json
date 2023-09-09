@@ -8,8 +8,8 @@
     "types": ["vitest/globals"],
     "emitDeclarationOnly": true,
     "declaration": true,
-    "outDir": "lib"
+    "outDir": "lib",
+    "rootDir": "./src"
   },
-  "exclude": ["node_modules", "lib/index.js"],
-  "include": ["./src/index.ts"]
+  "exclude": ["node_modules", "lib/index.js"]
 }
