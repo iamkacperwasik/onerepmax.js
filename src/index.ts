@@ -3,9 +3,7 @@ export {calculate_epley_1rm} from "./methods/Epley"
 export {calculate_lombardi_1rm} from "./methods/Lombardi"
 export {calculate_lander_1rm} from "./methods/Lander"
 export {calculate_wathan_1rm} from "./methods/Wathan"
-
-// Mayhew and Szekely Method - calculateMayhewSzekely1RM
-export const calculateMayhewSzekely1RM = () => {}
+export {calculate_mayhew_szekely_1rm} from "./methods/MayhewSzekely"
 
 // Ermal Feigenbaum Method - calculateFeigenbaum1RM
 export const calculateFeigenbaum1RM = () => {}
