@@ -1,5 +1,4 @@
-// Brzycki Method - calculateBrzycki1RM
-export const calculateBrzycki1RM = () => {}
+export {calculate_brzycki_1rm} from "./methods/Brzycki"
 
 // Epley Method - calculateEpley1RM
 export const calculateEpley1RM = () => {}

@@ -1,4 +1,4 @@
-export declare const calculateBrzycki1RM: () => void;
+export { calculate_brzycki_1rm } from "./methods/Brzycki";
 export declare const calculateEpley1RM: () => void;
 export declare const calculateLombardi1RM: () => void;
 export declare const calculateOConor1RM: () => void;
