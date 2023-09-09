@@ -36,7 +36,7 @@
     "pluginSearchDirs": false
   },
   "scripts": {
-    "build": "node build.mjs",
+    "build": "node build.mjs && tsc",
     "test": "vitest",
     "prepack": "npm run build"
   }

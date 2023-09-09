@@ -1,13 +1,15 @@
 {
   "compilerOptions": {
     "target": "ESNext",
-    "module": "NodeNext",
-    "moduleResolution": "nodenext",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
     "baseUrl": "./",
-    "noEmit": true,
     "strict": true,
-    "checkJs": true,
-    "types": ["vitest/globals"]
+    "types": ["vitest/globals"],
+    "emitDeclarationOnly": true,
+    "declaration": true,
+    "outDir": "lib"
   },
-  "exclude": ["node_modules", "lib/index.js"]
+  "exclude": ["node_modules", "lib/index.js"],
+  "include": ["./src/index.ts"]
 }
