@@ -1,7 +1,7 @@
 /**
  * Calculate 1 Repetition Maximum (1RM) using Kemmler Method.
- * @param weight_lifted - Weight lifted during the set (in kilograms).
- * @param repetitions - Number of repetitions performed.
+ * @param weight_lifted Weight lifted during the set (can be in any unit).
+ * @param repetitions Number of repetitions performed.
  * @returns The estimated 1RM.
  */
 export const calculate_kemmler_1rm = (
@@ -12,6 +12,7 @@ export const calculate_kemmler_1rm = (
     throw new Error("Weight and repetitions must be greater than zero.")
   }
 
+  // Kemmler Method formula for calculating 1RM:
   const one_rep_max =
     weight_lifted *
     (0.988 +
@@ -19,5 +20,6 @@ export const calculate_kemmler_1rm = (
       0.0019 * repetitions ** 2 -
       0.0000584 * repetitions ** 3)
 
+  // Return the calculated 1RM value.
   return one_rep_max
 }

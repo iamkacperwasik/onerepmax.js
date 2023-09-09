@@ -1,7 +1,7 @@
 /**
  * Calculate 1 Repetition Maximum (1RM) using O'Conner Method.
- * @param weightLifted - Weight lifted during the set (in kilograms).
- * @param repetitions - Number of repetitions performed.
+ * @param weightLifted Weight lifted during the set (can be in any unit).
+ * @param repetitions Number of repetitions performed.
  * @returns The estimated 1RM.
  */
 export const calculate_oconner_1rm = (
@@ -12,7 +12,9 @@ export const calculate_oconner_1rm = (
     throw new Error("Weight and repetitions must be greater than zero.")
   }
 
+  // O'Conner Method formula for calculating 1RM:
   const one_rep_max = weight_lifted * (1 + 0.025 * repetitions)
 
+  // Return the calculated 1RM value.
   return one_rep_max
 }
