@@ -1,12 +1,7 @@
 export {calculate_brzycki_1rm} from "./methods/Brzycki"
 export {calculate_epley_1rm} from "./methods/Epley"
 export {calculate_lombardi_1rm} from "./methods/Lombardi"
-
-// O'Conor Method - calculateOConor1RM
-export const calculateOConor1RM = () => {}
-
-// Lander Method - calculateLander1RM
-export const calculateLander1RM = () => {}
+export {calculate_lander_1rm} from "./methods/Lander"
 
 // Wathan Method - calculateWathan1RM
 export const calculateWathan1RM = () => {}
