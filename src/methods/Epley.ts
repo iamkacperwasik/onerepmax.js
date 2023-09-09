@@ -12,9 +12,7 @@ export const calculate_epley_1rm = (
     throw new Error("Weight and repetitions must be greater than zero.")
   }
 
-  const CONSTANT = 0.0333
-
-  const one_rep_max = weight_used * (1 + CONSTANT * repetitions)
+  const one_rep_max = weight_used * (1 + 0.0333 * repetitions)
 
   return one_rep_max
 }

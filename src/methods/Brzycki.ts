@@ -12,9 +12,7 @@ export const calculate_brzycki_1rm = (
     throw new Error("Weight and repetitions must be greater than zero.")
   }
 
-  const CONSTANT = 1.0278
-
-  const one_rep_max = weight_used / (CONSTANT - 0.0278 * repetitions)
+  const one_rep_max = weight_used / (1.0278 - 0.0278 * repetitions)
 
   return one_rep_max
 }
