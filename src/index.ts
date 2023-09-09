@@ -1,7 +1,7 @@
 export {calculate_epley_1rm} from "./methods/Epley"
 export {calculate_brzycki_1rm} from "./methods/Brzycki"
 export {calculate_adams_1rm} from "./methods/Adams"
-// Baechle
+export {calculate_baechle_1rm} from "./methods/Baechle"
 // Berger
 // Brown
 // Kemmler
