@@ -2,9 +2,7 @@ export {calculate_brzycki_1rm} from "./methods/Brzycki"
 export {calculate_epley_1rm} from "./methods/Epley"
 export {calculate_lombardi_1rm} from "./methods/Lombardi"
 export {calculate_lander_1rm} from "./methods/Lander"
-
-// Wathan Method - calculateWathan1RM
-export const calculateWathan1RM = () => {}
+export {calculate_wathan_1rm} from "./methods/Wathan"
 
 // Mayhew and Szekely Method - calculateMayhewSzekely1RM
 export const calculateMayhewSzekely1RM = () => {}
