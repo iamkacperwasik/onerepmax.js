@@ -1,6 +1,6 @@
 # onerepmax.js 🏋️‍♂️
 
-[![NPM Version](https://img.shields.io/npm/v/your-library-name.svg)](https://www.npmjs.com/package/your-library-name) [![License](https://img.shields.io/npm/l/your-library-name.svg)](https://github.com/your-username/your-library-name/blob/main/LICENSE)
+[![NPM Version](https://img.shields.io/npm/v/onerepmax.js.svg)](https://www.npmjs.com/package/onerepmax.js) [![License](https://img.shields.io/npm/l/onerepmax.js.svg)](https://github.com/iamkacperwasik/onerepmax.js/blob/main/LICENSE)
 
 Simplify 1-rep max calculations in weightlifting with onerepmax.js, your essential tool for accurate and efficient strength assessment using various formulas
 
