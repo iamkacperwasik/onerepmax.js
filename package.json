@@ -47,7 +47,7 @@
     "pluginSearchDirs": false
   },
   "scripts": {
-    "build": "rm -rf ./lib && node build.mjs && tsc src/index.ts --declaration --emitDeclarationOnly --outDir lib",
+    "build": "rm -rf ./lib && node build.mjs && tsc src/index.ts --baseUrl ./src --declaration  --emitDeclarationOnly --outDir lib",
     "test": "vitest",
     "prepack": "npm run build"
   }

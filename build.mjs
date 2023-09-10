@@ -7,4 +7,6 @@ await esbuild.build({
   minify: true,
   treeShaking: true,
   platform: "neutral",
+  bundle: true,
+  target: "ESNext",
 })
