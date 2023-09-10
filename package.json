@@ -8,7 +8,7 @@
   "license": "MIT",
   "private": false,
   "files": [
-    "lib/"
+    "lib/", "./README.md"
   ],
   "keywords": [
     "onerepmax.js",
