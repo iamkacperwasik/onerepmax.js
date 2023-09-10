@@ -1,30 +1,35 @@
-import {calculate_baechle_1rm} from "../../src/methods/Baechle"
+import {calculate_baechle_1rm} from "methods/Baechle"
 
 describe("Baechle Method", () => {
-  it("should calculate 1RM correctly for valid input values", () => {
-    const test_cases = [
-      {weight_lifted: 100, repetitions: 5, expected_1rm: 116.65},
-      {weight_lifted: 80, repetitions: 8, expected_1rm: 101.31},
-      {weight_lifted: 120, repetitions: 3, expected_1rm: 131.99},
-    ]
+  describe("valid input values", () => {
+    it("should calculate 1RM correctly for weight=100, reps=5", () => {
+      expect(calculate_baechle_1rm(100, 5)).toBeCloseTo(116.65, 2)
+    })
 
-    for (const {weight_lifted, repetitions, expected_1rm} of test_cases) {
-      const result = calculate_baechle_1rm(weight_lifted, repetitions)
+    it("should calculate 1RM correctly for weight=80, reps=8", () => {
+      expect(calculate_baechle_1rm(80, 8)).toBeCloseTo(101.31, 2)
+    })
 
-      expect(result).toBeCloseTo(expected_1rm, 2)
-    }
+    it("should calculate 1RM correctly for weight=120, reps=3", () => {
+      expect(calculate_baechle_1rm(120, 3)).toBeCloseTo(131.99, 2)
+    })
   })
 
-  it("should throw an error for zero or negative input values", () => {
-    const invalid_test_cases = [
-      {weight_lifted: 0, repetitions: 5},
-      {weight_lifted: 100, repetitions: 0},
-      {weight_lifted: -50, repetitions: 8},
-      {weight_lifted: 80, repetitions: -3},
-    ]
+  describe("invalid input values", () => {
+    it("should throw an error for zero weight lifted (weight=0, reps=5)", () => {
+      expect(() => calculate_baechle_1rm(0, 5)).toThrow()
+    })
 
-    for (const {weight_lifted, repetitions} of invalid_test_cases) {
-      expect(() => calculate_baechle_1rm(weight_lifted, repetitions)).toThrow()
-    }
+    it("should throw an error for zero repetitions (weight=100, reps=0)", () => {
+      expect(() => calculate_baechle_1rm(100, 0)).toThrow()
+    })
+
+    it("should throw an error for negative weight lifted (weight=-50, reps=8)", () => {
+      expect(() => calculate_baechle_1rm(-50, 8)).toThrow()
+    })
+
+    it("should throw an error for negative repetitions (weight=80, reps=-3)", () => {
+      expect(() => calculate_baechle_1rm(80, -3)).toThrow()
+    })
   })
 })

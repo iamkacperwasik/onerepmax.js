@@ -1,30 +1,35 @@
-import {calculate_lander_1rm} from "../../src/methods/Lander"
+import {calculate_lander_1rm} from "methods/Lander"
 
 describe("Lander Method", () => {
-  it("should calculate 1RM correctly for valid input values", () => {
-    const test_cases = [
-      {weight_used: 100, repetitions: 5, expected_1rm: 113.7},
-      {weight_used: 80, repetitions: 8, expected_1rm: 100.08},
-      {weight_used: 120, repetitions: 3, expected_1rm: 128.63},
-    ]
+  describe("valid input values", () => {
+    it("should calculate 1RM correctly for weight=100, reps=5", () => {
+      expect(calculate_lander_1rm(100, 5)).toBeCloseTo(113.7, 1)
+    })
 
-    for (const {weight_used, repetitions, expected_1rm} of test_cases) {
-      const result = calculate_lander_1rm(weight_used, repetitions)
+    it("should calculate 1RM correctly for weight=80, reps=8", () => {
+      expect(calculate_lander_1rm(80, 8)).toBeCloseTo(100.08, 1)
+    })
 
-      expect(result).toBeCloseTo(expected_1rm, 1)
-    }
+    it("should calculate 1RM correctly for weight=120, reps=3", () => {
+      expect(calculate_lander_1rm(120, 3)).toBeCloseTo(128.63, 1)
+    })
   })
 
-  it("should throw an error for zero or negative input values", () => {
-    const invalid_test_cases = [
-      {weight_used: 0, repetitions: 5},
-      {weight_used: 100, repetitions: 0},
-      {weight_used: -50, repetitions: 8},
-      {weight_used: 80, repetitions: -3},
-    ]
+  describe("invalid input values", () => {
+    it("should throw an error for zero weight lifted (weight=0, reps=5)", () => {
+      expect(() => calculate_lander_1rm(0, 5)).toThrow()
+    })
 
-    for (const {weight_used, repetitions} of invalid_test_cases) {
-      expect(() => calculate_lander_1rm(weight_used, repetitions)).toThrow()
-    }
+    it("should throw an error for zero repetitions (weight=100, reps=0)", () => {
+      expect(() => calculate_lander_1rm(100, 0)).toThrow()
+    })
+
+    it("should throw an error for negative weight lifted (weight=-50, reps=8)", () => {
+      expect(() => calculate_lander_1rm(-50, 8)).toThrow()
+    })
+
+    it("should throw an error for negative repetitions (weight=80, reps=-3)", () => {
+      expect(() => calculate_lander_1rm(80, -3)).toThrow()
+    })
   })
 })

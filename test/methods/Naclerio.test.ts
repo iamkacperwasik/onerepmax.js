@@ -1,30 +1,35 @@
-import {calculate_naclerio_1rm} from "src/methods/Naclerio"
+import {calculate_naclerio_1rm} from "methods/Naclerio"
 
 describe("Naclerio Method", () => {
-  it("should calculate 1RM correctly for valid input values", () => {
-    const testCases = [
-      {weightLifted: 100, repetitions: 5, expected1RM: 116.79},
-      {weightLifted: 80, repetitions: 8, expected1RM: 99.51},
-      {weightLifted: 120, repetitions: 3, expected1RM: 134.39},
-    ]
+  describe("valid input values", () => {
+    it("should calculate 1RM correctly for weight=100, reps=5", () => {
+      expect(calculate_naclerio_1rm(100, 5)).toBeCloseTo(116.79, 2)
+    })
 
-    for (const {weightLifted, repetitions, expected1RM} of testCases) {
-      const result = calculate_naclerio_1rm(weightLifted, repetitions)
+    it("should calculate 1RM correctly for weight=80, reps=8", () => {
+      expect(calculate_naclerio_1rm(80, 8)).toBeCloseTo(99.51, 2)
+    })
 
-      expect(result).toBeCloseTo(expected1RM, 2)
-    }
+    it("should calculate 1RM correctly for weight=120, reps=3", () => {
+      expect(calculate_naclerio_1rm(120, 3)).toBeCloseTo(134.39, 2)
+    })
   })
 
-  it("should throw an error for zero or negative input values", () => {
-    const invalidTestCases = [
-      {weightLifted: 0, repetitions: 5},
-      {weightLifted: 100, repetitions: 0},
-      {weightLifted: -50, repetitions: 8},
-      {weightLifted: 80, repetitions: -3},
-    ]
+  describe("invalid input values", () => {
+    it("should throw an error for zero weight lifted (weight=0, reps=5)", () => {
+      expect(() => calculate_naclerio_1rm(0, 5)).toThrow()
+    })
 
-    for (const {weightLifted, repetitions} of invalidTestCases) {
-      expect(() => calculate_naclerio_1rm(weightLifted, repetitions)).toThrow()
-    }
+    it("should throw an error for zero repetitions (weight=100, reps=0)", () => {
+      expect(() => calculate_naclerio_1rm(100, 0)).toThrow()
+    })
+
+    it("should throw an error for negative weight lifted (weight=-50, reps=8)", () => {
+      expect(() => calculate_naclerio_1rm(-50, 8)).toThrow()
+    })
+
+    it("should throw an error for negative repetitions (weight=80, reps=-3)", () => {
+      expect(() => calculate_naclerio_1rm(80, -3)).toThrow()
+    })
   })
 })
