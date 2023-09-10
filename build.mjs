@@ -6,6 +6,5 @@ await esbuild.build({
   drop: ["console", "debugger"],
   minify: true,
   treeShaking: true,
-  bundle: true,
-  platform: "node",
+  platform: "neutral",
 })
