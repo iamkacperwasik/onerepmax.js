@@ -1,17 +1,28 @@
 {
-  "name": "",
-  "version": "0.0.0",
+  "name": "onerepmax.js",
+  "version": "1.0.0",
   "main": "lib/index.js",
   "type": "module",
-  "repository": "https://github.com/iamkacperwasik/.git",
+  "repository": "https://github.com/iamkacperwasik/onerepmax.js",
   "author": "Kacper Wąsik <kacper@wasik.me>",
   "license": "MIT",
   "private": false,
   "files": [
     "lib/"
   ],
-  "keywords": [],
-  "description": "",
+  "keywords": [
+    "onerepmax.js",
+    "One-Rep Max (1RM)",
+    "Weightlifting",
+    "Strength Training",
+    "Metric",
+    "Calculation",
+    "Efficiency",
+    "Accuracy",
+    "Exercises",
+    "Fitness Goals"
+  ],
+  "description": "onerepmax.js simplifies the calculation of an individual's One-Rep Max (1RM) in weightlifting. It's a crucial metric in strength training, representing the maximum weight a person can lift for a single repetition. This library offers an efficient and precise method to compute 1RM values for a wide range of exercises and fitness objectives.",
   "types": "lib/index.d.ts",
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "^4.1.1",
