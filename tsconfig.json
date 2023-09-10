@@ -3,7 +3,7 @@
     "target": "ESNext",
     "module": "ESNext",
     "moduleResolution": "Bundler",
-    "baseUrl": "./",
+    "baseUrl": "./src",
     "strict": true,
     "types": ["vitest/globals"]
   },
